@@ -112,6 +112,3 @@ $ python webapp.py
 ## Screenshots
 To be awake is to be alive!!
 ![Screenshot](https://github.com/Bhumika-Kothwal/Binary-Beasts/blob/master/screenshots/drowsiness.jpeg)
-        
-## NOTE:
-ML features (face recognition via dlib, opencv) are disabled in the online demo due to hosting limits. For full functionality, run locally as per SETUP.md.
