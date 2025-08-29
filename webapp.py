@@ -8,7 +8,7 @@ import datetime
 import imutils
 from imutils import face_utils
 import cv2 as cv
-import dlib
+# import dlib
 
 outputFrame = None
 lock = threading.Lock()
@@ -16,8 +16,12 @@ detection = False
 vs = VideoStream(src=0).start()
 
 # getting the classifiers
-detector = dlib.get_frontal_face_detector()
-predictor = dlib.shape_predictor('shape_predictor_68_face_landmarks.dat')
+try:
+    import dlib
+    detector = dlib.get_frontal_face_detector()
+    predictor = dlib.shape_predictor('shape_predictor_68_face_landmarks.dat')
+except ImportError:
+    dlib = None
 
 # initialize a flask object
 app = Flask(__name__)
